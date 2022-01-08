@@ -1,0 +1,4 @@
+.env
+Papers/
+chromedriver.exe
+__pycache__/
