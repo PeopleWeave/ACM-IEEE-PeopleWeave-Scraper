@@ -6,14 +6,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
 from dotenv import load_dotenv
-import time
+import json
 
 class ACM_Scraper:
     # this variable will store the numbers of the pages that were visited so that the scraper know when to stop
     page_numbers_visited = []
-
+    paper_information_dictionary = []
     # gets a connection to the environment variables and sets up the webdriver
-    def __init__(self, search):
+    def __init__(self, search, paper_information):
         # setup the env variables
         load_dotenv()
         CHROMEDRIVER_PATH = os.getenv('CHROMEDRIVER_PATH')
@@ -23,6 +23,10 @@ class ACM_Scraper:
 
         self.search_query = search
 
+        # load the json file
+        # with open("paper_information.json", "r") as f:
+        #     self.paper_information_dictionary = json.load(f)
+        self.paper_information_dictionary = paper_information
         #setup the driver
         download_dir = "Papers" # for linux/*nix, download_dir="/usr/Public"
         options = webdriver.ChromeOptions()
@@ -71,7 +75,7 @@ class ACM_Scraper:
         )
         submit.click()
 
-        # filter for only research articles
+        # # filter for only research articles
         # content_type = WebDriverWait(self.driver,30).until(
         #     EC.presence_of_element_located((By.XPATH, '//*[@id="filter"]/div/div/div[2]/div[2]/div[1]/div[4]/a'))
         # )
@@ -83,32 +87,76 @@ class ACM_Scraper:
         # research_article.click()
     # goes through the pages and downloads all of the papers
     def download_papers(self):
-        # print('1')
-        # self.load_checker()
-        # print('2')
-        # a_tags = self.driver.find_elements(By.TAG_NAME,"a")
-        # print(len(a_tags))
-        # print('3')
-        # links = []
-        # for a in a_tags:
-        #     print(a.get_attribute("href"))
-        # print('4')
-        print('1')
+        # checks that the page has loaded
         self.load_checker()
-        print("2")
-        h5 = self.driver.find_elements(By.CLASS_NAME, "issue-item__title")
-        print('3')
-        print("H5:" + str(len(h5)))
-        spans = []
-        for h in h5:
-            spans.append(h.find_elements(By.XPATH, ".//*"))
-        print('4')
-        print("SPANS: " + str(len(spans)))
-        a = []
-        for s in spans:
-            a.append(s.find_elements(By.XPATH, ".//*"))
-        print(len(a))
-    
+        # identifies each card
+        lists = self.driver.find_elements(By.TAG_NAME, "ul")
+        card_list = None
+        for list in lists:
+            if list.get_attribute("class") == "search-result__xsl-body  items-results rlist--inline ":
+                card_list = list
+        cards = card_list.find_elements(By.XPATH, "./*")
+        
+        for c in cards:
+            if c.get_attribute("class") != "search__item issue-item-container":
+                cards.remove(c)
+        
+        # loop through each card and gather data
+        for card in cards:
+            paper_exists = False
+
+            doi_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
+            doi_link = doi_div.find_elements(By.TAG_NAME, "a")[1].get_attribute("href")
+            doi = doi_link[doi_link.index("illinois.edu/") + 13:]
+
+            for item in self.paper_information_dictionary:
+                if item["doi"] == doi:
+                    paper_exists = True
+                    
+            if not paper_exists:
+                # gets the title
+                h5 = card.find_element(By.CLASS_NAME, 'issue-item__title')
+                title = h5.find_elements(By.TAG_NAME, "a")[0].get_attribute("text")
+            
+                # gets the authors
+                try:
+                    show_authors_button = card.find_element(By.CLASS_NAME, "count-list").find_element(By.TAG_NAME, "a")
+                    show_authors_button.click()
+                except:
+                    pass
+
+                author_list = card.find_element(By.CLASS_NAME, "issue-item__content-right").find_element(By.TAG_NAME, "ul").find_elements(By.TAG_NAME, "li")
+                authors = []
+                
+                for a in author_list:
+                    a_tag = a.find_element(By.TAG_NAME, "a")
+                    if a_tag.get_attribute("class") != "read-less":
+                        authors.append(a_tag.get_attribute("title"))
+
+                # get the date
+                date_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
+                date = date_div.find_element(By.CLASS_NAME, "dot-separator").find_elements(By.TAG_NAME, "span")[0].text
+                date = date[:date.index(",")]
+
+                # get the journal
+                journal_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
+                journal = journal_div.find_elements(By.TAG_NAME, "a")[0].get_attribute("title")
+                
+
+                paper_info =  {"doi" : doi, "title" : title, "date" : date, "authors" : authors, "journal" : journal}
+
+                
+                self.paper_information_dictionary.append(paper_info)
+
+                # get the download button
+                a_tags = card.find_elements(By.TAG_NAME, "a")
+                for a in a_tags:
+                    if a.get_attribute("class") == "btn--icon simple-tooltip__block--b red btn":
+                        pass
+                         # a.click()
+        # self.save_paper_dictionary()
+
+
         
     # this function determines if the paper already has been downloaded and if not then gathers information and downloads the paper
     def download_single_paper(self, link):
@@ -124,6 +172,10 @@ class ACM_Scraper:
         right_arrow.click()
     # checks if the page has loaded for the papers page
     def load_checker(self):
-        load_checker = WebDriverWait(self.driver,30).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="pb-page-content"]/div/main/div[1]/div/div[2]/div/ul/li[21]/div[2]/div[1]'))
+        load_checker = WebDriverWait(self.driver,60).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="pb-page-content"]/div/main/div[1]/div/div[2]/div/div[1]/div[1]/span[2]/span[4]'))
         )
+
+    def save_paper_dictionary(self):
+        with open("paper_information.json", "a") as f:
+            json.dump(self.paper_information_dictionary, f)

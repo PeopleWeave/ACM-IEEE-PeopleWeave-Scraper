@@ -1,0 +1,256 @@
+[
+  {
+    "doi": "10.1145/1741906.1742236",
+    "title": "Artificial intelligence",
+    "date": "February 2010",
+    "authors": ["Akshar Joshi", "Gautam Mishra"],
+    "journal": "ICWET '10: Proceedings of the International Conference and Workshop on Emerging Trends in Technology"
+  },
+  {
+    "doi": "10.1145/3094405.3094406",
+    "title": "Performance of Container Networking Technologies",
+    "date": "August 2017",
+    "authors": [
+      "Yang Zhao",
+      "Nai Xia",
+      "Chen Tian",
+      "Bo Li",
+      "Yizhou Tang",
+      "Yi Wang",
+      "Gong Zhang",
+      "Rui Li",
+      "Alex X. Liu"
+    ],
+    "journal": "HotConNet '17: Proceedings of the Workshop on Hot Topics in Container Networking and Networked Systems"
+  },
+  {
+    "doi": "10.1145/3397125.3397141",
+    "title": "Artificial Intelligence: what is it?",
+    "date": "April 2020",
+    "authors": [
+      "Ibragim E. Suleimenov",
+      "Yelizaveta S. Vitulyova",
+      "Akhat S. Bakirov",
+      "Oleg A. Gabrielyan"
+    ],
+    "journal": "ICCTA '20: Proceedings of the 2020 6th International Conference on Computer and Technology Applications"
+  },
+  {
+    "doi": "10.1145/2248361.2248370",
+    "title": "Network coding meets information-centric networking: an architectural case for information dispersion through native network coding",
+    "date": "June 2012",
+    "authors": ["Marie-Jose Montpetit", "Cedric Westphal", "Dirk Trossen"],
+    "journal": "NoM '12: Proceedings of the 1st ACM workshop on Emerging Name-Oriented Mobile Networking Design - Architecture, Algorithms, and Applications"
+  },
+  {
+    "doi": "10.1145/1859995.1860005",
+    "title": "Intentional networking: opportunistic exploitation of mobile network diversity",
+    "date": "September 2010",
+    "authors": [
+      "Brett D. Higgins",
+      "Azarias Reda",
+      "Timur Alperovich",
+      "Jason Flinn",
+      "T. J. Giuli",
+      "Brian Noble",
+      "David Watson"
+    ],
+    "journal": "MobiCom '10: Proceedings of the sixteenth annual international conference on Mobile computing and networking"
+  },
+  {
+    "doi": "10.1145/544414.544462",
+    "title": "A virtual network laboratory for learning IP networking",
+    "date": "June 2002",
+    "authors": [
+      "Llu\u00eds F\u00e0brega",
+      "Jordi Massaguer",
+      "Teodor Jov\u00e9",
+      "David M\u00e9rida"
+    ],
+    "journal": "ITiCSE '02: Proceedings of the 7th annual conference on Innovation and technology in computer science education"
+  },
+  {
+    "doi": "10.1145/1659029.1659041",
+    "title": "User-provided networking: challenges and opportunities",
+    "date": "December 2009",
+    "authors": [
+      "Rute Sofia",
+      "Paulo Mendes",
+      "Shivendra S. Panwar",
+      "David Kennedy",
+      "Jordi Vallejo",
+      "Dirk Trossen"
+    ],
+    "journal": "U-NET '09: Proceedings of the 1st ACM workshop on User-provided networking: challenges and opportunities"
+  },
+  {
+    "doi": "10.1145/1044550.1041653",
+    "title": "Teaching networking congestion control",
+    "date": "June 2004",
+    "authors": ["O. Yu. Bogoyavlenskaya"],
+    "journal": "ITiCSE-WGR '04: Working group reports from ITiCSE on Innovation and technology in computer science education"
+  },
+  {
+    "doi": "10.1145/224170.224313",
+    "title": "Wide-area gigabit networking: Los Alamos HIPPI-SONET gateway",
+    "date": "December 1995",
+    "authors": ["Wally St. John", "Dave DuBois"],
+    "journal": "Supercomputing '95: Proceedings of the 1995 ACM/IEEE conference on Supercomputing"
+  },
+  {
+    "doi": "10.1145/2984356.2984373",
+    "title": "Network Names in Content-Centric Networking",
+    "date": "September 2016",
+    "authors": ["Cesar Ghali", "Gene Tsudik", "Christopher A. Wood"],
+    "journal": "ACM-ICN '16: Proceedings of the 3rd ACM Conference on Information-Centric Networking"
+  },
+  {
+    "doi": "10.1145/3267955.3269015",
+    "title": "A network stack for computation-centric vehicular networking",
+    "date": "September 2018",
+    "authors": [
+      "Dennis Grewe",
+      "Claudio Marxer",
+      "Christopher Scherb",
+      "Marco Wagner",
+      "Christian Tschudin"
+    ],
+    "journal": "ICN '18: Proceedings of the 5th ACM Conference on Information-Centric Networking"
+  },
+  {
+    "doi": "10.1145/588646.588709",
+    "title": "Authenticating public access networking",
+    "date": "November 2002",
+    "authors": ["Joseph W. Graham"],
+    "journal": "SIGUCCS '02: Proceedings of the 30th annual ACM SIGUCCS conference on User services"
+  },
+  {
+    "doi": "10.1145/3357150.3357395",
+    "title": "Compute First Networking: Distributed Computing meets ICN",
+    "date": "September 2019",
+    "authors": [
+      "Micha\u0142 Kr\u00f3l",
+      "Spyridon Mastorakis",
+      "David Oran",
+      "Dirk Kutscher"
+    ],
+    "journal": "ICN '19: Proceedings of the 6th ACM Conference on Information-Centric Networking"
+  },
+  {
+    "doi": "10.1145/3477482.3477485",
+    "title": "The graph neural networking challenge: a worldwide competition for education in AI/ML for networks",
+    "date": "July 2021",
+    "authors": [
+      "Jos\u00e9 Su\u00e1rez-Varela",
+      "Miquel Ferriol-Galm\u00e9s",
+      "Albert L\u00f3pez",
+      "Paul Almasan",
+      "Guillermo Bern\u00e1rdez",
+      "David Pujol-Perich",
+      "Krzysztof Rusek",
+      "Lo\u00efck Bonniot",
+      "Christoph Neumann",
+      "Fran\u00e7ois Schnitzler",
+      "Fran\u00e7ois Ta\u00efani",
+      "Martin Happ",
+      "Christian Maier",
+      "Jia Lei Du",
+      "Matthias Herlich",
+      "Peter Dorfinger",
+      "Nick Vincent Hainke",
+      "Stefan Venz",
+      "Johannes Wegener",
+      "Henrike Wissing",
+      "Bo Wu",
+      "Shihan Xiao",
+      "Pere Barlet-Ros",
+      "Albert Cabellos-Aparicio"
+    ],
+    "journal": "ACM SIGCOMM Computer Communication Review (SIGCOMM-CCR)"
+  },
+  {
+    "doi": "10.1145/2445196.2445223",
+    "title": "Demystifying networking: teaching non-majors via analogical problem-solving",
+    "date": "March 2013",
+    "authors": ["Sridhar Iyer", "Sahana Murthy"],
+    "journal": "SIGCSE '13: Proceeding of the 44th ACM technical symposium on Computer science education"
+  },
+  {
+    "doi": "10.1145/3267204.3267211",
+    "title": "Wireless Network Emulation for Research on Information-Centric Networking",
+    "date": "October 2018",
+    "authors": ["Philipp Moll", "Sebastian Theuermann", "Hermann Hellwagner"],
+    "journal": "WiNTECH '18: Proceedings of the 12th International Workshop on Wireless Network Testbeds, Experimental Evaluation & Characterization"
+  },
+  {
+    "doi": "10.1145/3387514.3405859",
+    "title": "Interpreting Deep Learning-Based Networking Systems",
+    "date": "July 2020",
+    "authors": [
+      "Zili Meng",
+      "Minhu Wang",
+      "Jiasong Bai",
+      "Mingwei Xu",
+      "Hongzi Mao",
+      "Hongxin Hu"
+    ],
+    "journal": "SIGCOMM '20: Proceedings of the Annual conference of the ACM Special Interest Group on Data Communication on the applications, technologies, architectures, and protocols for computer communication"
+  },
+  {
+    "doi": "10.1145/3437359.3465563",
+    "title": "Managing Cloud networking costs for data-intensive applications by provisioning dedicated network links",
+    "date": "July 2021",
+    "authors": [
+      "Igor Sfiligoi",
+      "Michael Hare",
+      "David Schultz",
+      "Frank W\u00fcrthwein",
+      "Benedikt Riedel",
+      "Tom Hutton",
+      "Steve Barnet",
+      "Vladimir Brik"
+    ],
+    "journal": "PEARC '21: Practice and Experience in Advanced Research Computing"
+  },
+  {
+    "doi": "10.1145/1324302.1324319",
+    "title": "A student-managed networking laboratory",
+    "date": "October 2007",
+    "authors": [
+      "Paul B. Albee",
+      "Laura A. Campbell",
+      "Martin A. Murray",
+      "Christopher M. Tongen",
+      "Jennifer L. Wolfe"
+    ],
+    "journal": "SIGITE '07: Proceedings of the 8th ACM SIGITE conference on Information technology education"
+  },
+  {
+    "doi": "10.1145/2286996.2287005",
+    "title": "A study of lustre networking over a 100 gigabit wide area network with 50 milliseconds of latency",
+    "date": "June 2012",
+    "authors": [
+      "Scott Michael",
+      "Liang Zhen",
+      "Robert Henschel",
+      "Stephen Simms",
+      "Eric Barton",
+      "Matthew Link"
+    ],
+    "journal": "DIDC '12: Proceedings of the fifth international workshop on Data-Intensive Distributed Computing Date"
+  },
+  {
+    "doi": "10.1145/2396556.2396558",
+    "title": "Softly defined networking",
+    "date": "October 2012",
+    "authors": ["Gordon Brebner"],
+    "journal": "ANCS '12: Proceedings of the eighth ACM/IEEE symposium on Architectures for networking and communications systems"
+  },
+  {
+    "doi": "10.1145/3460417.3483378",
+    "title": "Tangle centric networking",
+    "date": "September 2021",
+    "authors": ["Christopher Scherb", "Dennis Grewe", "Christian Tschudin"],
+    "journal": "ICN '21: Proceedings of the 8th ACM Conference on Information-Centric Networking"
+  }
+]
