@@ -87,6 +87,23 @@ class ACM_Scraper:
         # research_article.click()
     # goes through the pages and downloads all of the papers
     def download_papers(self):
+        page_count = 1
+        first_arrow = WebDriverWait(self.driver,60).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="pb-page-content"]/div/main/div[1]/div/div[2]/div/nav/span/a'))
+        )
+        link = first_arrow.get_attribute("href")
+        link = link[0:link.index("startPage=") + 10]
+   
+        while True:
+            self.download_single_page()
+            self.driver.get(link + str(page_count))
+            page_count += 1
+
+            if page_count > 100:
+                break
+
+
+    def download_single_page(self):
         # checks that the page has loaded
         self.load_checker()
         # identifies each card
@@ -103,21 +120,25 @@ class ACM_Scraper:
         
         # loop through each card and gather data
         for card in cards:
+            try:
+                doi_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
+                doi_link = doi_div.find_elements(By.TAG_NAME, "a")[1].get_attribute("href")
+                doi = doi_link[doi_link.index("illinois.edu/") + 13:]
+            except:
+                continue
+
             paper_exists = False
-
-            doi_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
-            doi_link = doi_div.find_elements(By.TAG_NAME, "a")[1].get_attribute("href")
-            doi = doi_link[doi_link.index("illinois.edu/") + 13:]
-
             for item in self.paper_information_dictionary:
                 if item["doi"] == doi:
                     paper_exists = True
                     
             if not paper_exists:
-                # gets the title
-                h5 = card.find_element(By.CLASS_NAME, 'issue-item__title')
-                title = h5.find_elements(By.TAG_NAME, "a")[0].get_attribute("text")
-            
+                title = ""
+                try:
+                    # gets the title
+                    h5 = card.find_element(By.CLASS_NAME, 'issue-item__title')
+                    title = h5.find_elements(By.TAG_NAME, "a")[0].get_attribute("text")
+                except: pass
                 # gets the authors
                 try:
                     show_authors_button = card.find_element(By.CLASS_NAME, "count-list").find_element(By.TAG_NAME, "a")
@@ -125,23 +146,33 @@ class ACM_Scraper:
                 except:
                     pass
 
-                author_list = card.find_element(By.CLASS_NAME, "issue-item__content-right").find_element(By.TAG_NAME, "ul").find_elements(By.TAG_NAME, "li")
                 authors = []
-                
-                for a in author_list:
-                    a_tag = a.find_element(By.TAG_NAME, "a")
-                    if a_tag.get_attribute("class") != "read-less":
-                        authors.append(a_tag.get_attribute("title"))
+                try:
+                    author_list = card.find_element(By.CLASS_NAME, "issue-item__content-right").find_element(By.TAG_NAME, "ul").find_elements(By.TAG_NAME, "li")
+                    
+                    
+                    for a in author_list:
+                        a_tag = a.find_element(By.TAG_NAME, "a")
+                        if a_tag.get_attribute("class") != "read-less":
+                            authors.append(a_tag.get_attribute("title"))
+                except: pass
 
                 # get the date
-                date_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
-                date = date_div.find_element(By.CLASS_NAME, "dot-separator").find_elements(By.TAG_NAME, "span")[0].text
-                date = date[:date.index(",")]
+                date = ""
+
+                try:
+                    date_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
+                    date = date_div.find_element(By.CLASS_NAME, "dot-separator").find_elements(By.TAG_NAME, "span")[0].text
+                    date = date[:date.index(",")]
+                except: pass
 
                 # get the journal
-                journal_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
-                journal = journal_div.find_elements(By.TAG_NAME, "a")[0].get_attribute("title")
-                
+                journal = ""
+                try:
+                    journal_div = card.find_element(By.CLASS_NAME, 'issue-item__detail')
+                    journal = journal_div.find_elements(By.TAG_NAME, "a")[0].get_attribute("title")
+                except: pass
+                    
 
                 paper_info =  {"doi" : doi, "title" : title, "date" : date, "authors" : authors, "journal" : journal}
 
@@ -149,15 +180,15 @@ class ACM_Scraper:
                 self.paper_information_dictionary.append(paper_info)
 
                 # get the download button
-                a_tags = card.find_elements(By.TAG_NAME, "a")
-                for a in a_tags:
-                    if a.get_attribute("class") == "btn--icon simple-tooltip__block--b red btn":
-                        pass
-                         # a.click()
+                try:
+                    a_tags = card.find_elements(By.TAG_NAME, "a")
+                    for a in a_tags:
+                        if a.get_attribute("class") == "btn--icon simple-tooltip__block--b red btn":
+                            pass
+                            # a.click()
+                except: pass
+           
         # self.save_paper_dictionary()
-
-
-        
     # this function determines if the paper already has been downloaded and if not then gathers information and downloads the paper
     def download_single_paper(self, link):
         print(link)

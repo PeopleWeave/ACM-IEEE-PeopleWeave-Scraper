@@ -7,6 +7,18 @@
     "journal": "ICWET '10: Proceedings of the International Conference and Workshop on Emerging Trends in Technology"
   },
   {
+    "doi": "10.1145/3397125.3397141",
+    "title": "Artificial Intelligence: what is it?",
+    "date": "April 2020",
+    "authors": [
+      "Ibragim E. Suleimenov",
+      "Yelizaveta S. Vitulyova",
+      "Akhat S. Bakirov",
+      "Oleg A. Gabrielyan"
+    ],
+    "journal": "ICCTA '20: Proceedings of the 2020 6th International Conference on Computer and Technology Applications"
+  },
+  {
     "doi": "10.1145/3094405.3094406",
     "title": "Performance of Container Networking Technologies",
     "date": "August 2017",
@@ -24,23 +36,24 @@
     "journal": "HotConNet '17: Proceedings of the Workshop on Hot Topics in Container Networking and Networked Systems"
   },
   {
-    "doi": "10.1145/3397125.3397141",
-    "title": "Artificial Intelligence: what is it?",
-    "date": "April 2020",
-    "authors": [
-      "Ibragim E. Suleimenov",
-      "Yelizaveta S. Vitulyova",
-      "Akhat S. Bakirov",
-      "Oleg A. Gabrielyan"
-    ],
-    "journal": "ICCTA '20: Proceedings of the 2020 6th International Conference on Computer and Technology Applications"
-  },
-  {
     "doi": "10.1145/2248361.2248370",
     "title": "Network coding meets information-centric networking: an architectural case for information dispersion through native network coding",
     "date": "June 2012",
     "authors": ["Marie-Jose Montpetit", "Cedric Westphal", "Dirk Trossen"],
     "journal": "NoM '12: Proceedings of the 1st ACM workshop on Emerging Name-Oriented Mobile Networking Design - Architecture, Algorithms, and Applications"
+  },
+  {
+    "doi": "10.1145/1358628.1358961",
+    "title": "Usable artificial intelligence",
+    "date": "April 2008",
+    "authors": [
+      "Aaron Spaulding",
+      "Anthony Jameson",
+      "Jonathan Grudin",
+      "Neil Yorke-Smith",
+      "Jack Zaientz"
+    ],
+    "journal": "CHI EA '08: CHI '08 Extended Abstracts on Human Factors in Computing Systems"
   },
   {
     "doi": "10.1145/1859995.1860005",
@@ -58,6 +71,27 @@
     "journal": "MobiCom '10: Proceedings of the sixteenth annual international conference on Mobile computing and networking"
   },
   {
+    "doi": "10.1145/201977.201988",
+    "title": "Evolutionary artificial intelligence",
+    "date": "April 1995",
+    "authors": ["Nils J. Nilsson"],
+    "journal": "ACM SIGART Bulletin (SIGAI)"
+  },
+  {
+    "doi": "10.1145/3034429",
+    "title": "Artificial intelligence",
+    "date": "February 2017",
+    "authors": [" CACM Staff"],
+    "journal": "Communications of the ACM (CACM)"
+  },
+  {
+    "doi": "10.1145/1167350.1167377",
+    "title": "Dynamically scripted artificial intelligence",
+    "date": "March 2005",
+    "authors": ["Nathan Dawson", "Hunter Hale"],
+    "journal": "ACM-SE 43: Proceedings of the 43rd annual Southeast regional conference - Volume 1"
+  },
+  {
     "doi": "10.1145/544414.544462",
     "title": "A virtual network laboratory for learning IP networking",
     "date": "June 2002",
@@ -68,6 +102,20 @@
       "David M\u00e9rida"
     ],
     "journal": "ITiCSE '02: Proceedings of the 7th annual conference on Innovation and technology in computer science education"
+  },
+  {
+    "doi": "10.1145/318371.318375",
+    "title": "Models and artificial intelligence",
+    "date": "December 1987",
+    "authors": ["Robert E. Shannon"],
+    "journal": "WSC '87: Proceedings of the 19th conference on Winter simulation"
+  },
+  {
+    "doi": "10.1145/800038.801045",
+    "title": "Invitation to artificial intelligence",
+    "date": "February 1983",
+    "authors": ["Robert N. D'heedene"],
+    "journal": "SIGCSE '83: Proceedings of the fourteenth SIGCSE technical symposium on Computer science education"
   },
   {
     "doi": "10.1145/1659029.1659041",
@@ -84,11 +132,25 @@
     "journal": "U-NET '09: Proceedings of the 1st ACM workshop on User-provided networking: challenges and opportunities"
   },
   {
+    "doi": "10.1145/3379920",
+    "title": "Dilemmas of artificial intelligence",
+    "date": "March 2020",
+    "authors": ["Peter J. Denning", "Dorothy E. Denning"],
+    "journal": "Communications of the ACM (CACM)"
+  },
+  {
     "doi": "10.1145/1044550.1041653",
     "title": "Teaching networking congestion control",
     "date": "June 2004",
     "authors": ["O. Yu. Bogoyavlenskaya"],
     "journal": "ITiCSE-WGR '04: Working group reports from ITiCSE on Innovation and technology in computer science education"
+  },
+  {
+    "doi": "10.1145/21850.253065",
+    "title": "Tutorial on artificial intelligence",
+    "date": "December 1985",
+    "authors": ["James K. Hightower"],
+    "journal": "WSC '85: Proceedings of the 17th conference on Winter simulation"
   },
   {
     "doi": "10.1145/224170.224313",
@@ -98,11 +160,39 @@
     "journal": "Supercomputing '95: Proceedings of the 1995 ACM/IEEE conference on Supercomputing"
   },
   {
+    "doi": "10.1145/3209800.3232903",
+    "title": "Geometry of artificial intelligence",
+    "date": "August 2018",
+    "authors": ["Serjan Burlak"],
+    "journal": "SIGGRAPH '18: ACM SIGGRAPH 2018 Computer Animation Festival"
+  },
+  {
+    "doi": "10.1109/SEAMS.2019.00028",
+    "title": "Self-adaptive artificial intelligence",
+    "date": "May 2019",
+    "authors": ["Rog\u00e9rio de Lemos", "Marek Grze\u015b"],
+    "journal": "SEAMS '19: Proceedings of the 14th International Symposium on Software Engineering for Adaptive and Self-Managing Systems"
+  },
+  {
     "doi": "10.1145/2984356.2984373",
     "title": "Network Names in Content-Centric Networking",
     "date": "September 2016",
     "authors": ["Cesar Ghali", "Gene Tsudik", "Christopher A. Wood"],
     "journal": "ACM-ICN '16: Proceedings of the 3rd ACM Conference on Information-Centric Networking"
+  },
+  {
+    "doi": "10.1145/2950039",
+    "title": "Artificial intelligence: think again",
+    "date": "January 2017",
+    "authors": ["Jerry Kaplan"],
+    "journal": "Communications of the ACM (CACM)"
+  },
+  {
+    "doi": "10.1145/3458652",
+    "title": "Medical artificial intelligence: the European legal perspective",
+    "date": "November 2021",
+    "authors": ["Karl St\u00f6ger", "David Schneeberger", "Andreas Holzinger"],
+    "journal": "Communications of the ACM (CACM)"
   },
   {
     "doi": "10.1145/3267955.3269015",
@@ -118,11 +208,39 @@
     "journal": "ICN '18: Proceedings of the 5th ACM Conference on Information-Centric Networking"
   },
   {
+    "doi": "10.1145/3462757.3466093",
+    "title": "Regulating artificial intelligence: a technology regulator's perspective",
+    "date": "June 2021",
+    "authors": [
+      "Joshua Ellul",
+      "Gordon Pace",
+      "Stephen McCarthy",
+      "Trevor Sammut",
+      "Juanita Brockdorff",
+      "Matthew Scerri"
+    ],
+    "journal": "ICAIL '21: Proceedings of the Eighteenth International Conference on Artificial Intelligence and Law"
+  },
+  {
     "doi": "10.1145/588646.588709",
     "title": "Authenticating public access networking",
     "date": "November 2002",
     "authors": ["Joseph W. Graham"],
     "journal": "SIGUCCS '02: Proceedings of the 30th annual ACM SIGUCCS conference on User services"
+  },
+  {
+    "doi": "10.3115/981923.981932",
+    "title": "Artificial Intelligence Corporation",
+    "date": "June 1981",
+    "authors": ["J. Norwood Crout"],
+    "journal": "ACL '81: Proceedings of the 19th annual meeting on Association for Computational Linguistics"
+  },
+  {
+    "doi": "10.1145/318242.318475",
+    "title": "Artificial intelligence and simulation: an introduction",
+    "date": "December 1986",
+    "authors": ["R. Greer Lavery"],
+    "journal": "WSC '86: Proceedings of the 18th conference on Winter simulation"
   },
   {
     "doi": "10.1145/3357150.3357395",
@@ -135,6 +253,13 @@
       "Dirk Kutscher"
     ],
     "journal": "ICN '19: Proceedings of the 6th ACM Conference on Information-Centric Networking"
+  },
+  {
+    "doi": "10.1145/3374587.3374635",
+    "title": "Artificial Intelligence in Operating System",
+    "date": "December 2019",
+    "authors": ["Abdul Waheed", " Sanaullah", "Haider Ali Farid Khan"],
+    "journal": "CSAI2019: Proceedings of the 2019 3rd International Conference on Computer Science and Artificial Intelligence"
   },
   {
     "doi": "10.1145/3477482.3477485",
@@ -252,5 +377,12 @@
     "date": "September 2021",
     "authors": ["Christopher Scherb", "Dennis Grewe", "Christian Tschudin"],
     "journal": "ICN '21: Proceedings of the 8th ACM Conference on Information-Centric Networking"
+  },
+  {
+    "doi": "10.1145/1125118.1125154",
+    "title": "Artificial intelligence II",
+    "date": "February 1973",
+    "authors": [],
+    "journal": "CSC '73: Proceedings of the 1st annual computer science conference on Program information abstracts"
   }
 ]
